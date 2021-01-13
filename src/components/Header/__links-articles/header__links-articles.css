@@ -1,0 +1,9 @@
+.header__links-articles {
+  font-family: 'Roboto';
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  color: #B6BCBF;
+  text-decoration: none;
+  padding: 11px 0 0 76px;
+}

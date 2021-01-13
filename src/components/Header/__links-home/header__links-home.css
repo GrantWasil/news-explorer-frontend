@@ -1,0 +1,10 @@
+.header__links-home {
+  text-decoration: none;
+  color: white;
+  font-family: 'Roboto';
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  padding: 11px 0 23px;
+  border-bottom: 3px solid white;
+}

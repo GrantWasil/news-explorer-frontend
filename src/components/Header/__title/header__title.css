@@ -1,5 +1,9 @@
 .header__title {
+  font-family: 'Roboto Slab';
   font-size: 20px;
   line-height: 24px;
   font-weight: 700;
+  text-decoration: none;
+  color: white;
+  padding-top: 11px;
 }

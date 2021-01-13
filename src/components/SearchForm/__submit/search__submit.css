@@ -1,0 +1,17 @@
+.search__submit {
+  background: #2F71E5;
+  box-shadow: 0px 5px 15px rgba(14,26,57, 0.2);
+  border-radius: 100px;
+  border: none;
+  color: white;
+  font-size: 18px;
+  line-height: 24px;
+  font-family: 'Roboto';
+  font-weight: 500;
+  padding: 20px 56px;
+  margin-left: -165px;
+}
+
+.search__submit:hover {
+  cursor: pointer;
+}

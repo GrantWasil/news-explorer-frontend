@@ -10,7 +10,7 @@
   font-family: "Inter";
   font-style: normal;
   font-weight: 500;
-  src: url('./inter-500-regular.woff') format('woff'), url('./inter-500-regular.woff2') format('woff2');
+  src: url('./inter-500.woff') format('woff'), url('./inter-500.woff2') format('woff2');
   font-display: swap;
 }
 

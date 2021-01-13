@@ -1,0 +1,10 @@
+@import url('./__title/results__title.css');
+@import url('./__more/results__more.css');
+
+.results {
+  background: #F5F6F7;
+  min-height: 974px;
+  padding-top: 80px;
+  display: flex;
+  flex-direction: column;
+}
