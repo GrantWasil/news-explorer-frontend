@@ -1,0 +1,7 @@
+.footer__links-logo {
+  margin-left: 28px;
+}
+
+.footer__links-logo:hover {
+  cursor: pointer;
+}

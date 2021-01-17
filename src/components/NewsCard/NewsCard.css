@@ -1,0 +1,18 @@
+@import url(./__img-image/card__img-image.css);
+@import url(./__img-save/card__img-save.css);
+@import url(./__info/card__info.css);
+@import url(./__info-date/card__info-date.css);
+@import url(./__info-title/card__info-title.css);
+@import url(./__info-text/card__info-text.css);
+@import url(./__info-source/card__info-source.css);
+
+.card {
+  max-width: 400px;
+  height: 576px;
+  display: flex;
+  flex-direction: column;
+}
+
+.card:hover {
+  cursor: pointer;
+}

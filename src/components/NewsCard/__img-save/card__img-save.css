@@ -1,0 +1,18 @@
+.card__img-save {
+  position: relative;
+  bottom: calc(100% - 64px);
+  left: calc(100% - 64px);
+  background-color: white;
+  border: 0;
+  border-radius: 8px;
+  width: 40px;
+  height: 40px;
+  background-image: url(../../../images/save.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.card__img-save:hover {
+  background-image: url(../../../images/save_hover.svg);
+  cursor: pointer;
+}

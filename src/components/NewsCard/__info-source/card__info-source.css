@@ -1,0 +1,8 @@
+.card__info-source {
+  text-transform: uppercase;
+  color: #B6BCBF;
+  font-family: 'Roboto Slab';
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+}

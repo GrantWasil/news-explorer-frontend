@@ -1,0 +1,5 @@
+.about__info {
+  display: flex;
+  flex-direction: column;
+  padding-left: 56px;
+}

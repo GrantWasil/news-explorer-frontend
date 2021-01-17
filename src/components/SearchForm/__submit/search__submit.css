@@ -15,3 +15,7 @@
 .search__submit:hover {
   cursor: pointer;
 }
+
+.search__submit:focus {
+  background-color: #2A65CC;
+}

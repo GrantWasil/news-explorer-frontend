@@ -1,5 +1,6 @@
 @import url('./__title/results__title.css');
 @import url('./__more/results__more.css');
+@import url('./__cards/results__cards.css');
 
 .results {
   background: #F5F6F7;

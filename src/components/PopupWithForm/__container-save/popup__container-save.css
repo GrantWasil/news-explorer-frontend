@@ -1,0 +1,22 @@
+.popup__container-save {
+  width: calc(100% - 72px);
+  margin-left: 32px;
+  border: none;
+  height: 64px;
+  border-radius: 100px;
+  background: #2F71E5;
+  font-family: 'Roboto';
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  color: white;
+  box-shadow: 0px 5px 15px rgba(14, 26, 57, 0.2);
+}
+
+.popup__container-save:hover {
+  cursor: pointer;
+}
+
+.popup__container-save:focus {
+  background-color: #2A65CC;
+}

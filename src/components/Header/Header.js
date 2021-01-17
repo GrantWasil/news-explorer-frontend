@@ -3,28 +3,35 @@ import './Header.css';
 import { Link } from 'react-router-dom';
 
 function Header(props) {
-  const { userEmail } = props;
+  const { user, page } = props;
   return (
-    <div className="header">
+    <div className={page === 'news' ? 'header__dark' : 'header'}>
       <div className="header__container container">
-        <Link to="/" className="header__title">NewsExplorer</Link>
         {
-          userEmail
+          user
             ? (
-              <div className="header__links">
-                <Link to="/" className="header__links-home">Home</Link>
-                <Link to="/saved-news" className="header__links-articles">Saved articles</Link>
-                <Link to="/signin" className="header__logout">
-                  <p className="header__logout-name">Grant</p>
-                  <div className="header__logout-img" />
-                </Link>
-              </div>
+              <>
+                <Link to="/" className={page === 'news' ? 'header__title header__user' : 'header__title'}>NewsExplorer</Link>
+                <div className="header__links">
+                  <Link to="/" className={page === 'news' ? 'header__links-home header__user' : 'header__links-home header__selected'}>Home</Link>
+                  <Link to="/saved-news" className={page === 'news' ? 'header__selected header__links-articles header__user' : 'header__links-articles'}>Saved articles</Link>
+                  <Link to="/" className={page === 'news' ? 'header__logout header__user' : 'header__logout'}>
+                    <p className={page === 'news' ? 'header__logout-name header__user' : 'header__logout-name'}>{user}</p>
+                    <div className={page === 'news' ? 'header__logout-img header__logout-dark' : 'header__logout-img'} />
+                  </Link>
+                </div>
+              </>
             )
             : (
-              <div className="header__links">
-                <Link to="/">Home</Link>
-                <Link to="/signin" className="header__links-login">Sign In</Link>
-              </div>
+              <>
+                <Link to="/" className={page === 'news' ? 'header__title header__user' : 'header__title'}>NewsExplorer</Link>
+                <div className="header__links">
+                  <Link to="/" className={page === 'news' ? 'header__links-home header__user' : 'header__selected header__links-home'}>Home</Link>
+                  <Link to="/" className={page === 'news' ? 'header__login header__user' : 'header__login'}>
+                    <p className={page === 'news' ? 'header__login-text header__user' : 'header__login-text'}>Sign- In</p>
+                  </Link>
+                </div>
+              </>
             )
 
         }

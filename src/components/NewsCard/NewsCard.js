@@ -1,8 +1,9 @@
 import React from 'react';
+import './NewsCard.css';
+import testCard from '../../images/card1.png';
 
 function NewsCard(props) {
   const {
-    image,
     alt,
     date,
     title,
@@ -12,9 +13,9 @@ function NewsCard(props) {
   return (
     <div className="card">
       <div className="card__img">
-        <img className="card__img-image" src={image} alt={alt} />
+        <img className="card__img-image" src={testCard} alt={alt} />
         <p className="card__img-status" />
-        <button className="card__img-save" type="submit">test</button>
+        <button className="card__img-save" type="submit" aria-label="Save" />
       </div>
       <div className="card__info">
         <p className="card__info-date">{date}</p>
