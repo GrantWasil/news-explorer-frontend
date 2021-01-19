@@ -1,4 +1,14 @@
 .main__search {
   background-image: url(../../../images/search.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   height: 567px;
+}
+
+@media (max-width: 1024px) {
+  .main__search {
+    background-image: url(../../../images/searchmedium.png);
+    height: 400px
+  }
 }

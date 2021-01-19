@@ -7,3 +7,11 @@
   margin: 0 auto 88px;
   color: white;
 }
+
+@media (max-width: 1024px) {
+  .search__subtitle {
+    line-height: 24px;
+    max-width: 452px;
+    margin: 0 0 48px;
+  }
+}

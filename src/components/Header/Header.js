@@ -3,7 +3,7 @@ import './Header.css';
 import { Link } from 'react-router-dom';
 
 function Header(props) {
-  const { user, page } = props;
+  const { user, page, handleLogin, handleLogout } = props;
   return (
     <div className={page === 'news' ? 'header__dark' : 'header'}>
       <div className="header__container container">
@@ -15,7 +15,7 @@ function Header(props) {
                 <div className="header__links">
                   <Link to="/" className={page === 'news' ? 'header__links-home header__user' : 'header__links-home header__selected'}>Home</Link>
                   <Link to="/saved-news" className={page === 'news' ? 'header__selected header__links-articles header__user' : 'header__links-articles'}>Saved articles</Link>
-                  <Link to="/" className={page === 'news' ? 'header__logout header__user' : 'header__logout'}>
+                  <Link to="/" className={page === 'news' ? 'header__logout header__user' : 'header__logout'} onClick={handleLogout}>
                     <p className={page === 'news' ? 'header__logout-name header__user' : 'header__logout-name'}>{user}</p>
                     <div className={page === 'news' ? 'header__logout-img header__logout-dark' : 'header__logout-img'} />
                   </Link>
@@ -28,7 +28,7 @@ function Header(props) {
                 <div className="header__links">
                   <Link to="/" className={page === 'news' ? 'header__links-home header__user' : 'header__selected header__links-home'}>Home</Link>
                   <Link to="/" className={page === 'news' ? 'header__login header__user' : 'header__login'}>
-                    <p className={page === 'news' ? 'header__login-text header__user' : 'header__login-text'}>Sign- In</p>
+                    <p className={page === 'news' ? 'header__login-text header__user' : 'header__login-text'} onClick={handleLogin}>Sign in</p>
                   </Link>
                 </div>
               </>

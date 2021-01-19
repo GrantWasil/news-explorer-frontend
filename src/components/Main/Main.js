@@ -6,12 +6,14 @@ import NewsCardList from '../NewsCardList/NewsCardList';
 import About from '../About/About';
 import Footer from '../Footer/Footer';
 import RegistrationPopup from '../RegistrationPopup/RegistrationPopup';
+import LoginPopup from '../LoginPopup/LoginPopup';
+import SavedNews from '../SavedNews/SavedNews';
 import './Main.css';
 
 function Main() {
 
   const [isLoginPopupOpen, setIsLoginPopupOpen] = React.useState(false);
-  const [isRegistrationPopupOpen, setIsRegistrationPopupOpen] = React.useState(true);
+  const [isRegistrationPopupOpen, setIsRegistrationPopupOpen] = React.useState(false);
 
 
   function onLogin() {
@@ -33,19 +35,23 @@ function Main() {
     <>
       <Route exact path="/">
         <div className="main__search">
-          <Header page="home" />
+          <Header page="home" handleLogin={onLogin} handleLogout={closeAllPopups} />
           <SearchForm />
         </div>
-        <NewsCardList />
+        <NewsCardList page="home" />
         <About />
         <Footer />
       </Route>
       <Route path="/saved-news">
         <div className="main__user">
-          <Header user="Test" page="news" />
+          <Header user="Test" page="news" handleLogin={onLogin} handleLogout={closeAllPopups} />
         </div>
+        <SavedNews />
+        <NewsCardList page="news" />
+        <Footer />
       </Route>
       <RegistrationPopup isOpen={isRegistrationPopupOpen} onClose={closeAllPopups} onLink={onLogin}/>
+      <LoginPopup isOpen={isLoginPopupOpen} onClose={closeAllPopups} onLink={onRegister} />
     </>
   );
 }

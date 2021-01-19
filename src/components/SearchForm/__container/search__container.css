@@ -1,0 +1,6 @@
+@media (max-width: 1024px) {
+  .search__container {
+    margin: 0 auto;
+    max-width: 58.333%;
+  }
+}

@@ -28,7 +28,7 @@ function PopupWithForm(props) {
           <button className="popup__container-save" type="submit">{submit}</button>
         </form>
         <p className="popup__text">
-          or <Link to="/" className="popup__text-link" onCLick={handleLink}>{linkText}</Link>
+          or <Link to="/" className="popup__text-link" onClick={handleLink}>{linkText}</Link>
         </p>
       </div>
     </section>

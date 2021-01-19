@@ -6,5 +6,11 @@
   box-sizing: border-box;
   border-radius: 100px;
   padding: 12px 19px;
-  margin-bottom: 13px;
+}
+
+@media (max-width: 1024px) {
+  .header__logout {
+    padding: 8px 15px;
+    margin-left: 16px;
+  }
 }

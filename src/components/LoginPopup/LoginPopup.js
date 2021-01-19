@@ -1,10 +1,9 @@
 import React from 'react';
 import PopupWithForm from '../PopupWithForm/PopupWithForm';
 
-function RegistrationPopup(props) {
+function LoginPopup(props) {
   const [email, setEmail] = React.useState('');
   const [password, setPassword] = React.useState('');
-  const [username, setUsername] = React.useState('');
 
   function handleEmailChange(e) {
     setEmail(e.target.value);
@@ -14,26 +13,22 @@ function RegistrationPopup(props) {
     setPassword(e.target.value);
   }
 
-  function handleUsernameChange(e) {
-    setUsername(e.target.value);
-  }
-
   function handleSubmit(e) {
     e.preventDefault();
-    if (!email || !password || !username) {
+    if (!email || !password) {
       return;
     }
   }
 
   return (
     <PopupWithForm
-      name="register"
-      title="Sign up"
+      name="login"
+      title="Sign in"
       isOpen={props.isOpen}
       onClose={props.onClose}
       handleSubmit={handleSubmit}
-      submit="Sign up"
-      linkText="Sign in"
+      submit="Sign in"
+      linkText="Sign up"
       handleLink={props.onLink}
     >
       <fieldset className="popup__field">
@@ -71,26 +66,9 @@ function RegistrationPopup(props) {
           className="popup__input-error"
           id="newPassword-input-error"
         ></span>
-        <label for="newUsername-input" className="popup__label">Username</label>
-        <input
-          className="popup__container-username popup__input"
-          id="newUsername-input"
-          placeholder="Enter your username"
-          type="text"
-          name="username"
-          minLength="2"
-          maxLength="200"
-          required
-          onChange={handleUsernameChange}
-          value={username}
-        />
-        <span
-          className="popup__input-error"
-          id="newUsername-input-error"
-        ></span>
       </fieldset>
     </PopupWithForm>
   )
 }
 
-export default RegistrationPopup;
+export default LoginPopup;

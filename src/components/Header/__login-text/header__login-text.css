@@ -8,3 +8,10 @@
   width: 152px;
   text-align: center;
 }
+
+@media (max-width: 1024px) {
+  .header__login-text {
+    width: 128px;
+    font-size: 16px;
+  }
+}

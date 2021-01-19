@@ -2,5 +2,5 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding-top: 19px;
+  align-items: center;
 }

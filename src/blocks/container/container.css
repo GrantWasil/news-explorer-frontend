@@ -2,3 +2,9 @@
   width: calc(100% - 14.444%);
   margin: 0 auto;
 }
+
+@media (max-width: 1024px) {
+  .container {
+    width: calc(100% - 10.4166%);
+  }
+}

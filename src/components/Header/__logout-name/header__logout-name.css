@@ -6,3 +6,9 @@
   color: white;
   margin: 0;
 }
+
+@media (max-width: 1024px) {
+  .header__logout-name {
+    font-size: 16px;
+  }
+}

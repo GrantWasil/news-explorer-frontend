@@ -5,6 +5,20 @@
   line-height: 24px;
   color: #B6BCBF;
   text-decoration: none;
-  margin: 11px 0 0 33.5px;
-  padding: 0 32px;
+  max-width: 178px;
+  align-self: flex-end;
+  margin-bottom: -14px;
+  margin-left: 44px;
+  padding-bottom: 23px;
+  text-align: center;
+  white-space: nowrap;
+}
+
+@media (max-width: 1024px) {
+  .header__links-articles {
+    width: 160px;
+    margin-bottom: -11px;
+    padding-bottom: 17px;
+    font-size: 16px;
+  }
 }
