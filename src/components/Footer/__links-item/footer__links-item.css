@@ -7,3 +7,9 @@
   color: #1A1B22;
   margin: 0 23px 0 28px;
 }
+
+@media (max-width: 580px) {
+  .footer__links-item {
+    margin: 23px 16px 0;
+  }
+}

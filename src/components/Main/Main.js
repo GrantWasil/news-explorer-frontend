@@ -8,16 +8,19 @@ import Footer from '../Footer/Footer';
 import RegistrationPopup from '../RegistrationPopup/RegistrationPopup';
 import LoginPopup from '../LoginPopup/LoginPopup';
 import SavedNews from '../SavedNews/SavedNews';
+import Navigation from '../Navigation/Navigation';
 import './Main.css';
 
 function Main() {
 
   const [isLoginPopupOpen, setIsLoginPopupOpen] = React.useState(false);
   const [isRegistrationPopupOpen, setIsRegistrationPopupOpen] = React.useState(false);
+  const [isHeaderMenuOpen, setIsHeaderMenuOpen] = React.useState(false);
 
 
   function onLogin() {
     setIsLoginPopupOpen(true);
+    setIsHeaderMenuOpen(false);
     setIsRegistrationPopupOpen(false);
   }
 
@@ -26,16 +29,25 @@ function Main() {
     setIsRegistrationPopupOpen(true);
   }
 
+  function onMenu(){
+    setIsHeaderMenuOpen(true);
+  }
+
   function closeAllPopups() {
     setIsRegistrationPopupOpen(false);
     setIsLoginPopupOpen(false);
+    setIsHeaderMenuOpen(false);
   }
 
   return (
     <>
       <Route exact path="/">
         <div className="main__search">
-          <Header page="home" handleLogin={onLogin} handleLogout={closeAllPopups} />
+          {isHeaderMenuOpen
+            ? <Navigation handleClose={closeAllPopups} handleLogin={onLogin} />
+            : <Header page="home" handleLogin={onLogin} handleLogout={closeAllPopups} handleMenu={onMenu} />
+          }
+
           <SearchForm />
         </div>
         <NewsCardList page="home" />
@@ -44,7 +56,10 @@ function Main() {
       </Route>
       <Route path="/saved-news">
         <div className="main__user">
-          <Header user="Test" page="news" handleLogin={onLogin} handleLogout={closeAllPopups} />
+          {isHeaderMenuOpen
+            ? <Navigation handleClose={closeAllPopups} handleLogin={onLogin} />
+            : <Header user="Test" page="news" handleLogin={onLogin} handleLogout={closeAllPopups} handleMenu={onMenu} />
+          }
         </div>
         <SavedNews />
         <NewsCardList page="news" />

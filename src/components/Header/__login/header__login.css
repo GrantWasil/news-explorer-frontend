@@ -8,9 +8,15 @@
   padding: 12px 19px;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 900px) {
   .header__login {
     margin-left: 16px;
     padding: 8px 12px;
+  }
+}
+
+@media (max-width: 580px) {
+  .header__login {
+    display: none;
   }
 }

@@ -19,3 +19,9 @@
 .search__submit:focus {
   background-color: #2A65CC;
 }
+
+@media (max-width: 580px) {
+  .search__submit {
+    margin: 16px 0 0 0;
+  }
+}

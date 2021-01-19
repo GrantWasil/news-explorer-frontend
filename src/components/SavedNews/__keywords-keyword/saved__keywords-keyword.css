@@ -4,4 +4,11 @@
   font-size: 18px;
   line-height: 24px;
   padding-left: 4px;
+  margin: 0;
+}
+
+@media (max-width: 580px) {
+  .saved__keywords-keyword {
+    white-space: pre;
+  }
 }

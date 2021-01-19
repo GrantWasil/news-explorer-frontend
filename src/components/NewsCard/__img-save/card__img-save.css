@@ -16,3 +16,17 @@
   background-image: url(../../../images/save_hover.svg);
   cursor: pointer;
 }
+
+@media (max-width: 900px) {
+  .card__img-save {
+    bottom: calc(100% - 48px);
+    left: calc(100% - 48px);
+  }
+}
+
+@media (max-width: 580px) {
+  .card__img-save {
+    bottom: calc(100% - 56px);
+    left: calc(100% - 56px);
+  }
+}

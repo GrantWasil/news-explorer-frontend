@@ -5,3 +5,16 @@
   grid-row-gap: 16px;
   padding-bottom: 64px;
 }
+
+@media (max-width: 900px) {
+  .results__cards {
+    grid-template-columns: repeat(auto-fit, minmax(224px, 1fr));
+    padding-bottom: 32px;
+  }
+}
+
+@media (max-width: 580px) {
+  .resutls__cards {
+    grid-template-columns: 90%;
+  }
+}

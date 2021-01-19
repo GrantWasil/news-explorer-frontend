@@ -5,5 +5,20 @@
 @import url(./__keywords-keyword/saved__keywords-keyword.css);
 
 .saved {
-  height: 294px;
+  height: 254px;
+  margin-top: 40px;
+}
+
+@media (max-width: 900px) {
+  .saved {
+    margin-top: 24px;
+    height: 180px;
+  }
+}
+
+@media (max-width: 580px) {
+  .saved {
+    height: 248px;
+    margin-top: 8px;
+  }
 }

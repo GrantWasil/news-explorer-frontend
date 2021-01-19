@@ -6,8 +6,14 @@
   align-items: center;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 900px) {
   .header__dark {
     height: 66px;
+  }
+}
+
+@media (max-width: 580px) {
+  .header__dark {
+    height: 56px;
   }
 }

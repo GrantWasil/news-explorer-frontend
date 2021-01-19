@@ -5,5 +5,19 @@
   line-height: 24px;
   color: #1A1B22;
   opacity: .5;
-  margin: 40px 0 28px;
+  margin: 0 0 28px;
+}
+
+@media (max-width: 900px) {
+  .saved__subtitle {
+    font-size: 14px;
+    margin: 0 0 16px;
+  }
+}
+
+@media (max-width: 580px) {
+  .saved__subtitle {
+    font-size: 12px;
+
+  }
 }

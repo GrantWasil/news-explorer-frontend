@@ -3,3 +3,17 @@
   height: 272px;
   border-radius: 10px 10px 0 0;
 }
+
+@media (max-width: 900px) {
+  .card__img-image {
+    width: 224px;
+    height: 150px;
+  }
+}
+
+@media (max-width: 580px) {
+  .card__img-image {
+    width: 100%;
+    height: 196px;
+  }
+}

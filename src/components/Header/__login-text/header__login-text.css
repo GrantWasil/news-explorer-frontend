@@ -9,7 +9,7 @@
   text-align: center;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 900px) {
   .header__login-text {
     width: 128px;
     font-size: 16px;

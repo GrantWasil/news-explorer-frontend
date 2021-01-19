@@ -8,11 +8,18 @@
   margin: 80px auto 32px;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 900px) {
   .search__title {
     margin: 38px 3px 16px;
     font-size: 36px;
     line-height: 40px;
     max-width: 385px;
+  }
+}
+
+@media (max-width: 580px) {
+  .search__title {
+    max-width: 285px;
+    margin: 0;
   }
 }

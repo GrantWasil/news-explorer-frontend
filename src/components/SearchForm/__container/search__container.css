@@ -1,6 +1,13 @@
-@media (max-width: 1024px) {
+@media (max-width: 900px) {
   .search__container {
     margin: 0 auto;
     max-width: 58.333%;
+  }
+}
+
+@media (max-width: 580px) {
+  .search__container {
+    padding: 30px 16px 32px;
+    max-width: 320px;
   }
 }

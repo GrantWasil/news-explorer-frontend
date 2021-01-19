@@ -5,6 +5,7 @@
 @import url(./__info-title/card__info-title.css);
 @import url(./__info-text/card__info-text.css);
 @import url(./__info-source/card__info-source.css);
+@import url(./__img-status/card__img-status.css);
 
 .card {
   max-width: 400px;
@@ -15,4 +16,17 @@
 
 .card:hover {
   cursor: pointer;
+}
+
+@media (max-width: 900px) {
+  .card {
+    max-width: 224px;
+    height: 420px
+  }
+}
+
+@media (max-width: 580px) {
+  .card {
+    max-width: 100%;
+  }
 }

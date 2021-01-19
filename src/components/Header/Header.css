@@ -12,6 +12,8 @@
 @import url(./__user/header__user.css);
 @import url(./__login/header__login.css);
 @import url(./__login-text/header__login-text.css);
+@import url(./__menu/header__menu.css);
+@import url(./__menu-dark/header__menu-dark.css);
 
 .header {
   height: 80px;
@@ -21,8 +23,14 @@
   align-items: center;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 900px) {
   .header {
     height: 66px;
+  }
+}
+
+@media (max-width: 580px) {
+  .header {
+    height: 56px;
   }
 }

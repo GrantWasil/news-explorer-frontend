@@ -3,3 +3,9 @@
   max-width: 608px;
   margin: 0 auto 77px;
 }
+
+@media (max-width: 580px) {
+  .search__form {
+    flex-direction: column;
+  }
+}

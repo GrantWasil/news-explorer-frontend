@@ -5,3 +5,18 @@
 .footer__links-logo:hover {
   cursor: pointer;
 }
+
+@media (max-width: 580px) {
+  .footer__links-logo {
+    width: 20px;
+    height: 100%;
+    position: relative;
+    left: 100%;
+    bottom: 50%;
+  }
+
+  .footer__links-logo:nth-of-type(2){
+    left: 130%;
+    bottom: 65%;
+  }
+}

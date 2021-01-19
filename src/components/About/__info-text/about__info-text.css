@@ -5,3 +5,9 @@
   line-height: 24px;
   margin: 0 0 30px;
 }
+
+@media (max-width: 900px) {
+  .about__info-text {
+    max-width: 424px;
+  }
+}

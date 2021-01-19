@@ -1,0 +1,8 @@
+.navigation__login {
+  margin: 0 auto;
+  border: 1px solid white;
+  border-radius: 100px;
+  box-sizing: border-box;
+  padding: 16px 116px;
+  margin-top: 30px;
+}

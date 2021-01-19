@@ -5,3 +5,19 @@
   line-height: 30px;
   margin: 12px 0 16px;
 }
+
+@media (max-width: 900px) {
+  .card__info-title {
+    font-size: 22px;
+    line-height: 24px;
+  }
+}
+
+@media (max-width: 580px) {
+  .card__info-title {
+    text-overflow: ellipsis;
+    max-height: 48px;
+    overflow: hidden;
+    margin: 10px 0 14px;
+  }
+}

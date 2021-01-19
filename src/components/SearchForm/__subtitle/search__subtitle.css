@@ -8,10 +8,17 @@
   color: white;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 900px) {
   .search__subtitle {
     line-height: 24px;
     max-width: 452px;
     margin: 0 0 48px;
+  }
+}
+
+@media (max-width: 580px) {
+  .search__subtitle {
+    max-width: 288px;
+    margin: 16px 0 122px;
   }
 }

@@ -5,3 +5,9 @@
   line-height: 22px;
   color: #B6BCBF;
 }
+
+@media (max-width: 580px) {
+  .footer__copyright {
+    align-self: center;
+  }
+}

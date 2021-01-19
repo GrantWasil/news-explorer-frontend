@@ -3,7 +3,8 @@ import './Header.css';
 import { Link } from 'react-router-dom';
 
 function Header(props) {
-  const { user, page, handleLogin, handleLogout } = props;
+  const { user, page, handleLogin, handleLogout, handleMenu } = props;
+
   return (
     <div className={page === 'news' ? 'header__dark' : 'header'}>
       <div className="header__container container">
@@ -19,6 +20,7 @@ function Header(props) {
                     <p className={page === 'news' ? 'header__logout-name header__user' : 'header__logout-name'}>{user}</p>
                     <div className={page === 'news' ? 'header__logout-img header__logout-dark' : 'header__logout-img'} />
                   </Link>
+                  <div className={page === 'news' ? 'header__menu-dark' : 'header__menu'} onClick={handleMenu} />
                 </div>
               </>
             )
@@ -30,6 +32,7 @@ function Header(props) {
                   <Link to="/" className={page === 'news' ? 'header__login header__user' : 'header__login'}>
                     <p className={page === 'news' ? 'header__login-text header__user' : 'header__login-text'} onClick={handleLogin}>Sign in</p>
                   </Link>
+                  <div className={page === 'news' ? 'header__menu-dark' : 'header__menu'} onClick={handleMenu} />
                 </div>
               </>
             )

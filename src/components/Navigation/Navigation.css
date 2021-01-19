@@ -1,0 +1,20 @@
+@import url(./__header/navigation__header.css);
+@import url(./__close/navigation__close.css);
+@import url(./__title/navigation__title.css);
+@import url(./__links/navigation__links.css);
+@import url(./__links-item/navigation__links-item.css);
+@import url(./__login/navigation__login.css);
+
+@media (max-width: 580px) {
+  .navigation {
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    background: #1A1B22;
+    border-radius: 0 0 16px 16px;
+    height: 320px;
+    color: white;
+    font-family: 'Roboto';
+    font-weight: 500;
+  }
+}

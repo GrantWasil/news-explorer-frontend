@@ -3,8 +3,14 @@
   margin: 0 auto;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 900px) {
   .container {
     width: calc(100% - 10.4166%);
+  }
+}
+
+@media (max-width: 580px) {
+  .container {
+    width: calc(100% - 10%);
   }
 }

@@ -6,9 +6,17 @@
   height: 567px;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 900px) {
   .main__search {
     background-image: url(../../../images/searchmedium.png);
     height: 400px
+  }
+}
+
+@media (max-width: 580px) {
+  .main__search {
+    background-image: url(../../../images/searchsmall.png);
+    height: 536px;
+    background-size: cover;
   }
 }
