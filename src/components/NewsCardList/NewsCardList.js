@@ -26,6 +26,8 @@ function NewsCardList(props) {
                       title={card.title}
                       text={card.text}
                       source={card.source}
+                      keword={card.keyword}
+                      page={page}
                     />
                   ))
                 }
@@ -46,6 +48,8 @@ function NewsCardList(props) {
                       title={card.title}
                       text={card.text}
                       source={card.source}
+                      keyword={card.keyword}
+                      page={page}
                     />
                   ))
                 }

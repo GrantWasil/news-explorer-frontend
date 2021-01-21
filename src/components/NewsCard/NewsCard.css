@@ -6,8 +6,12 @@
 @import url(./__info-text/card__info-text.css);
 @import url(./__info-source/card__info-source.css);
 @import url(./__img-status/card__img-status.css);
+@import url(./__img/card__img.css);
+@import url(./__img-keyword/card__img-keyword.css);
+@import url(./__img-delete/card__img-delete.css);
 
 .card {
+  position: relative;
   max-width: 400px;
   height: 576px;
   display: flex;

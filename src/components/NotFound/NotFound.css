@@ -1,0 +1,12 @@
+@import url(./__img/notfound__img.css);
+@import url(./__title/notfound__text.css);
+@import url(./__text/notfound__title.css);
+
+.notfound {
+  background-color: #F5F6F7;
+  height: 374px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

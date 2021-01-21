@@ -9,6 +9,6 @@
 
 @media (max-width: 580px) {
   .saved__keywords-keyword {
-    white-space: pre;
+    word-wrap: normal;
   }
 }

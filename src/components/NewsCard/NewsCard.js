@@ -9,13 +9,24 @@ function NewsCard(props) {
     title,
     text,
     source,
+    keyword,
+    page,
   } = props;
   return (
     <div className="card">
       <div className="card__img">
         <img className="card__img-image" src={testCard} alt={alt} />
+        {
+          page === "news"
+          ?
+          <>
+          <p className="card__img-keyword">{keyword}</p>
+          <button className="card__img-delete" type="submit" aria-label="Delete" />
+          </>
+          : <button className="card__img-save" type="submit" aria-label="Save" />
+        }
         <p className="card__img-status" />
-        <button className="card__img-save" type="submit" aria-label="Save" />
+
       </div>
       <div className="card__info">
         <p className="card__info-date">{date}</p>
