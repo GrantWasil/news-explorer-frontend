@@ -17,7 +17,7 @@
   }
 }
 
-@media (max-width: 580px) {
+@media (max-width: 510px) {
   .search__title {
     max-width: 285px;
     margin: 0;

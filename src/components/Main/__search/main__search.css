@@ -13,7 +13,7 @@
   }
 }
 
-@media (max-width: 580px) {
+@media (max-width: 510px) {
   .main__search {
     background-image: url(../../../images/searchsmall.png);
     height: 536px;

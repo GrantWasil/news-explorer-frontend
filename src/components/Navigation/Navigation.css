@@ -5,7 +5,7 @@
 @import url(./__links-item/navigation__links-item.css);
 @import url(./__login/navigation__login.css);
 
-@media (max-width: 580px) {
+@media (max-width: 510px) {
   .navigation {
     position: absolute;
     top: 0px;

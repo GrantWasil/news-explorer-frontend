@@ -1,8 +1,11 @@
 .card__info-source {
+  position: absolute;
   text-transform: uppercase;
   color: #B6BCBF;
   font-family: 'Roboto Slab';
   font-weight: 700;
   font-size: 16px;
   line-height: 20px;
+  margin: 0;
+  bottom: 16px;
 }

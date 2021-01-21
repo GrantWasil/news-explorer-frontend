@@ -9,7 +9,7 @@
   }
 }
 
-@media (max-width: 580px) {
+@media (max-width: 510px) {
   .container {
     width: calc(100% - 10%);
   }

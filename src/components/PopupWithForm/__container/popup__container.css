@@ -9,7 +9,7 @@
 	z-index: 5;
 }
 
-@media (max-width: 580px) {
+@media (max-width: 510px) {
   .popup__container {
     position: absolute;
     max-width: 100%;

@@ -19,7 +19,7 @@
   }
 }
 
-@media (max-width: 580px) {
+@media (max-width: 510px) {
   .card__img-delete {
     top: 16px;
     right: 16px;

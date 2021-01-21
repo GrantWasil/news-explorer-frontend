@@ -8,7 +8,7 @@
   margin: 0 23px 0 28px;
 }
 
-@media (max-width: 580px) {
+@media (max-width: 510px) {
   .footer__links-item {
     margin: 23px 16px 0;
   }

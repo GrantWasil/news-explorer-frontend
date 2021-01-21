@@ -22,7 +22,7 @@
   }
 }
 
-@media (max-width: 580px) {
+@media (max-width: 510px) {
   .card__img-keyword {
     top: 16px;
     left: 16px;

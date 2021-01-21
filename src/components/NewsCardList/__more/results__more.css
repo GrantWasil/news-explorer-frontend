@@ -24,7 +24,7 @@
   }
 }
 
-@media (max-width: 580px) {
+@media (max-width: 510px) {
   .results__more {
     padding: 16px 98px;
   }

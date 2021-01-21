@@ -20,7 +20,7 @@
   background-color: #2A65CC;
 }
 
-@media (max-width: 580px) {
+@media (max-width: 510px) {
   .search__submit {
     margin: 16px 0 0 0;
   }

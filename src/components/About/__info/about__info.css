@@ -4,7 +4,7 @@
   padding-left: 56px;
 }
 
-@media (max-width: 580px) {
+@media (max-width: 510px) {
   .about__info {
     padding-left: 0;
   }

@@ -14,7 +14,7 @@
   }
 }
 
-@media (max-width: 580px) {
+@media (max-width: 510px) {
   .results__title {
     margin-bottom: 58px;
   }

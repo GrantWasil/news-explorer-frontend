@@ -10,7 +10,7 @@
   }
 }
 
-@media (max-width: 580px) {
+@media (max-width: 510px) {
   .about__image {
     width: 272px;
     height: 100%;

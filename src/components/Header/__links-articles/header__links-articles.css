@@ -23,7 +23,7 @@
   }
 }
 
-@media (max-width: 580px) {
+@media (max-width: 510px) {
   .header__links-articles {
     display: none;
   }
