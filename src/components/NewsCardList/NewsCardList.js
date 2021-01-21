@@ -15,7 +15,7 @@ function NewsCardList(props) {
           ? (
             <div className="container">
               <h2 className="results__title">Search results</h2>
-              <div className="results__cards">
+              <ul className="results__cards">
                 {
                   data.cards.map((card, i) => (
                     <NewsCard
@@ -31,13 +31,13 @@ function NewsCardList(props) {
                     />
                   ))
                 }
-              </div>
+              </ul>
               <button className="results__more" type="submit">Show more</button>
             </div>
           )
           : (
             <div className="container">
-              <div className="results__cards">
+              <ul className="results__cards">
                 {
                   data.cards.map((card, i) => (
                     <NewsCard
@@ -53,7 +53,7 @@ function NewsCardList(props) {
                     />
                   ))
                 }
-              </div>
+              </ul>
             </div>
           )
       }

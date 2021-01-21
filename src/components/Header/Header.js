@@ -6,8 +6,8 @@ function Header(props) {
   const { user, page, handleLogin, handleLogout, handleMenu } = props;
 
   return (
-    <div className={page === 'news' ? 'header__dark' : 'header'}>
-      <div className="header__container container">
+    <header className={page === 'news' ? 'header__dark' : 'header'}>
+      <nav className="header__container container">
         {
           user
             ? (
@@ -38,8 +38,8 @@ function Header(props) {
             )
 
         }
-      </div>
-    </div>
+      </nav>
+    </header>
   );
 }
 

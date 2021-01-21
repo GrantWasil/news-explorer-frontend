@@ -6,7 +6,7 @@ import './Footer.css';
 
 function Footer() {
   return (
-    <div className="footer">
+    <footer className="footer">
       <p className="footer__copyright">© 2020 Supersite, Powered by News API</p>
       <div className="footer__links">
         <Link to="/" className="footer__links-item">Home</Link>
@@ -18,7 +18,7 @@ function Footer() {
           <img src={FacebookLogo} className="footer__links-logo" alt="Facebook" />
         </a>
       </div>
-    </div >
+    </footer>
   );
 }
 
