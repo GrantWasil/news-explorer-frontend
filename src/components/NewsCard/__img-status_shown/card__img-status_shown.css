@@ -1,0 +1,5 @@
+.card__img-status_shown {
+  visibility: visible;
+  opacity: 1;
+  transition-delay: 0s;
+}

@@ -6,7 +6,7 @@ const data = require('../../utils/data.json');
 
 function NewsCardList(props) {
 
-  const { page } = props;
+  const { page, user } = props;
 
   return (
     <section className="results">
@@ -28,6 +28,7 @@ function NewsCardList(props) {
                       source={card.source}
                       keword={card.keyword}
                       page={page}
+                      user={user}
                     />
                   ))
                 }
@@ -50,6 +51,7 @@ function NewsCardList(props) {
                       source={card.source}
                       keyword={card.keyword}
                       page={page}
+                      user={user}
                     />
                   ))
                 }

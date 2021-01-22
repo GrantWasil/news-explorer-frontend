@@ -3,6 +3,7 @@ import './NewsCard.css';
 import testCard from '../../images/card1.png';
 
 function NewsCard(props) {
+  const [isStatusShown, setIsStatusShown] = React.useState(false);
   const {
     alt,
     date,
@@ -11,22 +12,38 @@ function NewsCard(props) {
     source,
     keyword,
     page,
+    user
   } = props;
+
+  function handleButtonHover() {
+    if (!user) {
+      setIsStatusShown(true);
+    }
+    return;
+  }
+
+  function handleButtonLeave() {
+    setIsStatusShown(false);
+  }
+
   return (
     <div className="card">
       <div className="card__img">
         <img className="card__img-image" src={testCard} alt={alt} />
         {
           page === "news"
-          ?
-          <>
-          <p className="card__img-keyword">{keyword}</p>
-          <button className="card__img-delete" type="submit" aria-label="Delete" />
-          </>
-          : <button className="card__img-save" type="submit" aria-label="Save" />
+            ?
+            <>
+              <p className="card__img-keyword">{keyword}</p>
+              <p className={isStatusShown ? "card__img-status card__img-status_shown" : "card__img-status"}>Remove from saved</p>
+              <div className="card__img-delete" type="submit" aria-label="Delete" onMouseEnter={handleButtonHover} onMouseLeave={handleButtonLeave} />
+            </>
+            :
+            <>
+              <p className={isStatusShown ? "card__img-status card__img-status_shown" : "card__img-status"}>Sign in to save articles</p>
+              <div className="card__img-save" type="submit" aria-label="Save" onMouseEnter={handleButtonHover} onMouseLeave={handleButtonLeave} />
+            </>
         }
-        <p className="card__img-status" />
-
       </div>
       <div className="card__info">
         <p className="card__info-date">{date}</p>
