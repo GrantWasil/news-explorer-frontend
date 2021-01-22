@@ -11,11 +11,13 @@ function Footer() {
       <div className="footer__links">
         <Link to="/" className="footer__links-item">Home</Link>
         <a href="https://practicum.yandex.com" target="_blank" rel="noreferrer" className="footer__links-item">Practicum by Yandex</a>
+      </div>
+      <div className="footer__logos">
         <a href="https://github.com/GrantWasil" target="_blank" rel="noreferrer">
-          <img src={GithubLogo} className="footer__links-logo" alt="Github" />
+          <div className="footer__links-logo footer__github" />
         </a>
         <a href="https://www.facebook.com/YPracticum/" target="_blank" rel="noreferrer">
-          <img src={FacebookLogo} className="footer__links-logo" alt="Facebook" />
+          <div className="footer__links-logo footer__facebook" />
         </a>
       </div>
     </footer>

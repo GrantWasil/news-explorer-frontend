@@ -1,5 +1,7 @@
 .footer__links-logo {
   margin-left: 28px;
+  width: 20px;
+  height: 20px;
 }
 
 .footer__links-logo:hover {
@@ -7,16 +9,5 @@
 }
 
 @media (max-width: 510px) {
-  .footer__links-logo {
-    width: 20px;
-    height: 100%;
-    position: relative;
-    left: 100%;
-    bottom: 50%;
-  }
 
-  .footer__links-logo:nth-of-type(2){
-    left: 130%;
-    bottom: 65%;
-  }
 }

@@ -2,9 +2,13 @@
 @import url(./__links/footer__links.css);
 @import url(./__links-item/footer__links-item.css);
 @import url(./__links-logo/footer__links-logo.css);
+@import url(./__facebook/footer__facebook.css);
+@import url(./__github/footer__github.css);
+@import url(./__logos/footer__logos.css);
 
 .footer {
   height: 80px;
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
