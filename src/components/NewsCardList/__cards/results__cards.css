@@ -5,6 +5,7 @@
   grid-row-gap: 16px;
   padding: 0 0 64px;
   margin: 0;
+  justify-items: center;
 }
 
 @media (max-width: 900px) {
@@ -18,7 +19,7 @@
 
 @media (max-width: 510px) {
   .results__cards {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(288px, 1fr);
     grid-row-gap: 10px;
   }
 }

@@ -11,6 +11,6 @@
 
 @media (max-width: 510px) {
   .container {
-    width: calc(100% - 10%);
+    width: 300px;
   }
 }

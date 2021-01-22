@@ -37,7 +37,7 @@ function RegistrationPopup(props) {
       handleLink={props.onLink}
     >
       <fieldset className="popup__field">
-        <label for="newEmail-input" className="popup__label">Email</label>
+        <label className="popup__label">Email</label>
         <input
           className="popup__container-email popup__input"
           id="newEmail-input"
@@ -54,7 +54,7 @@ function RegistrationPopup(props) {
           className="popup__input-error"
           id="newEmail-input-error"
         ></span>
-        <label for="newPassword-input" className="popup__label">Password</label>
+        <label className="popup__label">Password</label>
         <input
           className="popup__container-password popup__input"
           id="newPassword-input"
@@ -71,7 +71,7 @@ function RegistrationPopup(props) {
           className="popup__input-error"
           id="newPassword-input-error"
         ></span>
-        <label for="newUsername-input" className="popup__label">Username</label>
+        <label className="popup__label">Username</label>
         <input
           className="popup__container-username popup__input"
           id="newUsername-input"

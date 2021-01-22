@@ -32,10 +32,10 @@ function LoginPopup(props) {
       handleLink={props.onLink}
     >
       <fieldset className="popup__field">
-        <label for="newEmail-input" className="popup__label">Email</label>
+        <label className="popup__label">Email</label>
         <input
           className="popup__container-email popup__input"
-          id="newEmail-input"
+          id="Email-input"
           placeholder="Enter email"
           type="email"
           name="email"
@@ -49,10 +49,10 @@ function LoginPopup(props) {
           className="popup__input-error"
           id="newEmail-input-error"
         ></span>
-        <label for="newPassword-input" className="popup__label">Password</label>
+        <label className="popup__label">Password</label>
         <input
           className="popup__container-password popup__input"
-          id="newPassword-input"
+          id="Password-input"
           placeholder="Enter password"
           type="password"
           name="password"

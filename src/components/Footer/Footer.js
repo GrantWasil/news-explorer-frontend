@@ -1,7 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import GithubLogo from '../../images/github.svg';
-import FacebookLogo from '../../images/facebook.svg';
 import './Footer.css';
 
 function Footer() {
