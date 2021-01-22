@@ -10,6 +10,7 @@
   font-weight: 500;
   padding: 20px 56px;
   margin-left: -165px;
+  z-index: 1;
 }
 
 .search__submit:hover {
