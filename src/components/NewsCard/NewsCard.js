@@ -1,6 +1,6 @@
 import React from 'react';
 import './NewsCard.css';
-import testCard from '../../images/card1.png';
+import testCard from '../../images/card1.jpg';
 
 function NewsCard(props) {
   const [isStatusShown, setIsStatusShown] = React.useState(false);
