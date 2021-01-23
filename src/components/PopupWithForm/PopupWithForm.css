@@ -11,7 +11,7 @@
 @import url(./__container-save/_inactive/popup__container-save_inactive.css);
 @import url(./__text/popup__text.css);
 @import url(./__text-link/popup__text-link.css);
-@import url(./__opened/popup__opened.css);
+@import url(./_opened/popup_opened.css);
 
 .popup {
 	position: fixed;

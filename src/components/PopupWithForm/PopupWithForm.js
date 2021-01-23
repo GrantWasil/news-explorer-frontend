@@ -16,8 +16,8 @@ function PopupWithForm(props) {
   } = props;
   return (
     <section className={isOpen
-      ? `popup popup--${name} popup__opened`
-      : `popup popup--${name}`}
+      ? `popup popup_type_${name} popup_opened`
+      : `popup popup_type_${name}`}
     >
       <div className="popup__overlay" onClick={onClose} />
       <div className="popup__container">
