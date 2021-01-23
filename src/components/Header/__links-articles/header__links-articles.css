@@ -17,6 +17,7 @@
 @media (max-width: 900px) {
   .header__links-articles {
     width: 160px;
+    margin-left: 2%;
     margin-bottom: -11px;
     padding-bottom: 17px;
     font-size: 16px;
