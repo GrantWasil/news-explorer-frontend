@@ -1,0 +1,14 @@
+.card__info {
+  position: relative;
+  background-color: white;
+  border-radius: 0 0 10px 10px;
+  padding: 20px 24px 0 24px;
+  height: 304px;
+  top: -5px;
+}
+
+@media (max-width: 900px) {
+  .card__info {
+    padding: 10px 16px 0;
+  }
+}

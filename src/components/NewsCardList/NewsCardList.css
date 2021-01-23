@@ -1,0 +1,22 @@
+@import url('./__title/results__title.css');
+@import url('./__more/results__more.css');
+@import url('./__cards/results__cards.css');
+
+.results {
+  background: #F5F6F7;
+  padding-top: 80px;
+  display: flex;
+  flex-direction: column;
+}
+
+@media (max-width: 900px) {
+  .results {
+    padding-top: 40px;
+  }
+}
+
+@media (max-width: 510px) {
+  .results {
+    padding-top: 32px;
+  }
+}

@@ -1,0 +1,17 @@
+.header__login-text {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  color: white;
+  margin: 0;
+  width: 152px;
+  text-align: center;
+}
+
+@media (max-width: 900px) {
+  .header__login-text {
+    width: 128px;
+    font-size: 16px;
+  }
+}

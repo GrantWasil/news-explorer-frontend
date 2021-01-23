@@ -1,0 +1,14 @@
+.saved__keywords-keyword {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24px;
+  padding-left: 4px;
+  margin: 0;
+}
+
+@media (max-width: 510px) {
+  .saved__keywords-keyword {
+    word-wrap: normal;
+  }
+}

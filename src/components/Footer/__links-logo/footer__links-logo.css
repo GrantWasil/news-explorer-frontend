@@ -1,0 +1,13 @@
+.footer__links-logo {
+  margin-left: 28px;
+  width: 20px;
+  height: 20px;
+}
+
+.footer__links-logo:hover {
+  cursor: pointer;
+}
+
+@media (max-width: 510px) {
+
+}

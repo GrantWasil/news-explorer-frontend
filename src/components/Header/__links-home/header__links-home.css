@@ -1,0 +1,28 @@
+.header__links-home {
+  text-decoration: none;
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  max-width: 68px;
+  padding-bottom: 23px;
+  align-self: flex-end;
+  margin-bottom: -14px;
+  text-align: center;
+}
+
+@media (max-width: 900px) {
+  .header__links-home {
+    margin-bottom: -11px;
+    padding-bottom: 17px;
+    max-width: 60px;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 510px) {
+  .header__links-home {
+    display: none;
+  }
+}

@@ -1,0 +1,13 @@
+.about__info-text {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  margin: 0 0 30px;
+}
+
+@media (max-width: 900px) {
+  .about__info-text {
+    max-width: 424px;
+  }
+}

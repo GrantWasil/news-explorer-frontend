@@ -1,0 +1,27 @@
+.card__img-delete {
+  background-image: url(../../../images/trash.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  border: none;
+  border-radius: 8px;
+  width: 40px;
+  height: 40px;
+  background-color: white;
+  position: absolute;
+  right: 24px;
+  top: 24px;
+}
+
+@media (max-width: 900px) {
+  .card__img-delete {
+    top: 8px;
+    right: 8px;
+  }
+}
+
+@media (max-width: 510px) {
+  .card__img-delete {
+    top: 16px;
+    right: 16px;
+  }
+}

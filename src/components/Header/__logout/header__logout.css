@@ -1,0 +1,22 @@
+.header__logout {
+  display: flex;
+  text-decoration: none;
+  margin-left: 64px;
+  border: 1px solid white;
+  box-sizing: border-box;
+  border-radius: 100px;
+  padding: 12px 19px;
+}
+
+@media (max-width: 900px) {
+  .header__logout {
+    padding: 8px 15px;
+    margin-left: 16px;
+  }
+}
+
+@media (max-width: 510px) {
+  .header__logout {
+    display: none;
+  }
+}

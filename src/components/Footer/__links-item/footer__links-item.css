@@ -1,0 +1,15 @@
+.footer__links-item {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  text-decoration: none;
+  color: #1A1B22;
+  margin: 0 23px 0 28px;
+}
+
+@media (max-width: 510px) {
+  .footer__links-item {
+    margin: 23px 16px 0;
+  }
+}

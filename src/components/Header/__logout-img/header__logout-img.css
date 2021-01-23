@@ -1,0 +1,9 @@
+.header__logout-img {
+  background-image: url(../../../images/logout.png);
+  min-width: 24px;
+  height: 24px;
+  padding: 0;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-left: 12px;
+}

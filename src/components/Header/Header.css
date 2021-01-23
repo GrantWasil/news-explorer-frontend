@@ -1,0 +1,36 @@
+@import url(./__container/header__container.css);
+@import url(./__title/header__title.css);
+@import url(./__links/header__links.css);
+@import url(./__links-home/header__links-home.css);
+@import url(./__links-articles/header__links-articles.css);
+@import url(./__logout/header__logout.css);
+@import url(./__logout-name/header__logout-name.css);
+@import url(./__logout-img/header__logout-img.css);
+@import url(./__logout-dark/header__logout-dark.css);
+@import url(./__selected/header__selected.css);
+@import url(./__dark/header__dark.css);
+@import url(./__user/header__user.css);
+@import url(./__login/header__login.css);
+@import url(./__login-text/header__login-text.css);
+@import url(./__menu/header__menu.css);
+@import url(./__menu-dark/header__menu-dark.css);
+
+.header {
+  height: 80px;
+  box-shadow: inset 0px -1px 0px rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.01);
+  display: flex;
+  align-items: center;
+}
+
+@media (max-width: 900px) {
+  .header {
+    height: 66px;
+  }
+}
+
+@media (max-width: 510px) {
+  .header {
+    height: 56px;
+  }
+}

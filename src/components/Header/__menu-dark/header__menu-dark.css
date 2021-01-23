@@ -1,0 +1,7 @@
+@media (max-width: 510px) {
+    .header__menu-dark {
+    background-image: url(../../../images/menudark.svg);
+    width: 24px;
+    height: 24px;
+  }
+}

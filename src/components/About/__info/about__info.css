@@ -1,0 +1,11 @@
+.about__info {
+  display: flex;
+  flex-direction: column;
+  padding-left: 56px;
+}
+
+@media (max-width: 510px) {
+  .about__info {
+    padding-left: 0;
+  }
+}

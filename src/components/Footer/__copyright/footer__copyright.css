@@ -1,0 +1,13 @@
+.footer__copyright {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  color: #B6BCBF;
+}
+
+@media (max-width: 510px) {
+  .footer__copyright {
+    align-self: center;
+  }
+}

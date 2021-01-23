@@ -1,0 +1,24 @@
+.card__info-title {
+  font-family: 'Roboto Slab', sans-serif;
+  font-weight: 400;
+  font-size: 26px;
+  line-height: 30px;
+  margin: 12px 0 16px;
+}
+
+@media (max-width: 900px) {
+  .card__info-title {
+    font-size: 22px;
+    line-height: 24px;
+    margin: 4.44% 0 1.37%
+  }
+}
+
+@media (max-width: 510px) {
+  .card__info-title {
+    text-overflow: ellipsis;
+    max-height: 48px;
+    overflow: hidden;
+    margin: 10px 0 14px;
+  }
+}

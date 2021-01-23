@@ -1,0 +1,7 @@
+.notfound__img {
+  background-image: url(../../../images/not-found_v1.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100px;
+  width: 100px;
+}

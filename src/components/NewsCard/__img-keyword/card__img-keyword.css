@@ -1,0 +1,30 @@
+.card__img-keyword {
+  display: inline-block;
+  position: absolute;
+  background-color: white;
+  padding: 8px 22px;
+  border-radius: 10px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 24px;
+  text-align: center;
+  margin: 0;
+  left: 24px;
+  top: 24px;
+}
+
+@media (max-width: 900px) {
+  .card__img-keyword {
+    padding: 8px 20px;
+    top: 8px;
+    left: 8px;
+  }
+}
+
+@media (max-width: 510px) {
+  .card__img-keyword {
+    top: 16px;
+    left: 16px;
+  }
+}

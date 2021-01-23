@@ -1,0 +1,8 @@
+.navigation__header {
+  padding: 0 16px;
+  display: flex;
+  color: white;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: inset 0px -1px 0px rgba(255, 255, 255, 0.2);
+}

@@ -1,0 +1,32 @@
+.card__img-save {
+  position: absolute;
+  right: 24px;
+  top: 24px;
+  background-color: white;
+  border: 0;
+  border-radius: 8px;
+  width: 40px;
+  height: 40px;
+  background-image: url(../../../images/save.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.card__img-save:hover {
+  background-image: url(../../../images/save_hover.svg);
+  cursor: pointer;
+}
+
+@media (max-width: 900px) {
+  .card__img-save {
+    top: 8px;
+    right: 8px;
+  }
+}
+
+@media (max-width: 510px) {
+  .card__img-save {
+    top: 16px;
+    right: 16px;
+  }
+}

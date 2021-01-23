@@ -1,0 +1,11 @@
+.search__form {
+  display: flex;
+  max-width: 608px;
+  margin: 0 auto 77px;
+}
+
+@media (max-width: 510px) {
+  .search__form {
+    flex-direction: column;
+  }
+}

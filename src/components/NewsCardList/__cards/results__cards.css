@@ -1,0 +1,25 @@
+.results__cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column-gap: 16px;
+  grid-row-gap: 16px;
+  padding: 0 0 64px;
+  margin: 0;
+  justify-items: center;
+}
+
+@media (max-width: 900px) {
+  .results__cards {
+    grid-template-columns: repeat(auto-fit, minmax(224px, 1fr));
+    grid-column-gap: 8px;
+    grid-row-gap: 8px;
+    padding-bottom: 32px;
+  }
+}
+
+@media (max-width: 510px) {
+  .results__cards {
+    grid-template-columns: minmax(288px, 1fr);
+    grid-row-gap: 10px;
+  }
+}

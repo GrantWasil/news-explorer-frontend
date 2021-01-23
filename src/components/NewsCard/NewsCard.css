@@ -1,0 +1,39 @@
+@import url(./__img-image/card__img-image.css);
+@import url(./__img-save/card__img-save.css);
+@import url(./__info/card__info.css);
+@import url(./__info-date/card__info-date.css);
+@import url(./__info-title/card__info-title.css);
+@import url(./__info-text/card__info-text.css);
+@import url(./__info-source/card__info-source.css);
+@import url(./__img-status/card__img-status.css);
+@import url(./__img/card__img.css);
+@import url(./__img-keyword/card__img-keyword.css);
+@import url(./__img-delete/card__img-delete.css);
+@import url(./__img-status_shown/card__img-status_shown.css);
+@import url(./__img-save_saved/card__img-save_saved.css);
+
+.card {
+  position: relative;
+  max-width: 400px;
+  max-height: 576px;
+  display: flex;
+  flex-direction: column;
+}
+
+.card:hover {
+  cursor: pointer;
+}
+
+@media (max-width: 900px) {
+  .card {
+    max-width: 224px;
+    max-height: 420px
+  }
+}
+
+@media (max-width: 510px) {
+  .card {
+    max-width: 100%;
+    max-height: 700px;
+  }
+}

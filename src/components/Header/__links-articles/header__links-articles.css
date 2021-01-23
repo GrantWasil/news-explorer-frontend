@@ -1,0 +1,31 @@
+.header__links-articles {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  color: #B6BCBF;
+  text-decoration: none;
+  max-width: 178px;
+  align-self: flex-end;
+  margin-bottom: -14px;
+  margin-left: 44px;
+  padding-bottom: 23px;
+  text-align: center;
+  white-space: nowrap;
+}
+
+@media (max-width: 900px) {
+  .header__links-articles {
+    width: 160px;
+    margin-left: 2%;
+    margin-bottom: -11px;
+    padding-bottom: 17px;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 510px) {
+  .header__links-articles {
+    display: none;
+  }
+}

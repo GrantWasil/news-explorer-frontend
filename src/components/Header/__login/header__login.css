@@ -1,0 +1,22 @@
+.header__login {
+  display: flex;
+  text-decoration: none;
+  margin-left: 64px;
+  border: 1px solid white;
+  box-sizing: border-box;
+  border-radius: 100px;
+  padding: 12px 19px;
+}
+
+@media (max-width: 900px) {
+  .header__login {
+    margin-left: 16px;
+    padding: 8px 12px;
+  }
+}
+
+@media (max-width: 510px) {
+  .header__login {
+    display: none;
+  }
+}

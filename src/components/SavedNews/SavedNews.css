@@ -1,0 +1,24 @@
+@import url(./__subtitle/saved__subtitle.css);
+@import url(./__title/saved__title.css);
+@import url(./__keywords/saved__keywords.css);
+@import url(./__keywords-title/saved__keywords-title.css);
+@import url(./__keywords-keyword/saved__keywords-keyword.css);
+
+.saved {
+  height: 254px;
+  margin-top: 40px;
+}
+
+@media (max-width: 900px) {
+  .saved {
+    margin-top: 24px;
+    height: 180px;
+  }
+}
+
+@media (max-width: 510px) {
+  .saved {
+    height: 248px;
+    margin-top: 8px;
+  }
+}
