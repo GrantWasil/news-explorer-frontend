@@ -9,6 +9,7 @@ import RegistrationPopup from '../RegistrationPopup/RegistrationPopup';
 import LoginPopup from '../LoginPopup/LoginPopup';
 import SavedNews from '../SavedNews/SavedNews';
 import Navigation from '../Navigation/Navigation';
+import Preloader from '../Preloader/Preloader';
 import './Main.css';
 
 function Main() {
@@ -50,6 +51,7 @@ function Main() {
 
           <SearchForm />
         </div>
+        <Preloader />
         <NewsCardList page="home" />
         <About />
         <Footer />

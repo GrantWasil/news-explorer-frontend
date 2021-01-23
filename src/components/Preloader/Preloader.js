@@ -3,9 +3,10 @@ import './Preloader.css'
 
 function Preloader() {
   return (
-    <>
-      <i class="circle-preloader"></i>
-    </>
+    <div className="preloader">
+      <i className="preloader__circle"></i>
+      <p className="preloader__text">Searching for news...</p>
+    </div>
   )
 }
 
