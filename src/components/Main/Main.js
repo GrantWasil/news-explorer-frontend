@@ -1,5 +1,5 @@
 import React from "react";
-import { Route } from "react-router-dom";
+import { Route, useHistory } from "react-router-dom";
 import Header from "../Header/Header";
 import SearchForm from "../SearchForm/SearchForm";
 import NewsCardList from "../NewsCardList/NewsCardList";
@@ -27,11 +27,11 @@ function Main() {
   const [isNotFoundShown, setIsNotFoundShown] = React.useState(false);
   const [user, setUser] = React.useState({});
   const [userArticles, setUserArticles] = React.useState({});
+  const history = useHistory();
 
   React.useEffect(() => {
     api.checkUserData().then((res) => {
       if (res.data) {
-        console.log(res);
         setUser(res.data);
         api.getArticles().then((data) => {
           setUserArticles({
@@ -113,6 +113,7 @@ function Main() {
     localStorage.removeItem("jwt");
     setUser({});
     closeAllPopups();
+    history.push('/');
   }
 
   function onSaveArticle(title, text, date, source, link, image) {
@@ -185,7 +186,7 @@ function Main() {
             />
           )}
         </div>
-        <SavedNews />
+        <SavedNews user={user} articles={userArticles} />
         <NewsCardList
           page="news"
           results={userArticles}
