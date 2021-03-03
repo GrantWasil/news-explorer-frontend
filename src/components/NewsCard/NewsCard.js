@@ -5,6 +5,7 @@ import { CurrentUserContext } from "../../contexts/CurrentUserContext";
 function NewsCard(props) {
   const [isStatusShown, setIsStatusShown] = React.useState(false);
   const {
+    id,
     image,
     alt,
     date,
@@ -42,8 +43,13 @@ function NewsCard(props) {
     handleClick(title, text, date, source, link, image);
   }
 
+  function onDeleteClick(e) {
+    e.preventDefault();
+    handleClick(id);
+  }
+
   function handleButtonHover() {
-    if (!user.name) {
+    if (!user.name || page === "news" ) {
       setIsStatusShown(true);
     }
     return;
@@ -77,6 +83,7 @@ function NewsCard(props) {
               aria-label="Delete"
               onMouseEnter={handleButtonHover}
               onMouseLeave={handleButtonLeave}
+              onClick={onDeleteClick}
             />
           </>
         ) : (

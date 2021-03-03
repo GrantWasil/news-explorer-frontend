@@ -101,6 +101,16 @@ class Api {
       }),
     }).then((res) => res.json());
   }
+
+  deleteArticle(id) {
+    return fetch(`${this._nxplrApi}/articles/${id}`, {
+      method: "DELETE",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${localStorage.getItem("jwt")}`,
+      },
+    }).then((res) => res.json());
+  }
 }
 
 const today = new Date().toISOString();

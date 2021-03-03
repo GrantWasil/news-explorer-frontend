@@ -11,8 +11,8 @@ import SavedNews from "../SavedNews/SavedNews";
 import Navigation from "../Navigation/Navigation";
 import NotFound from "../NotFound/NotFound";
 import Preloader from "../Preloader/Preloader";
-import api from '../../utils/MainApi';
-import { CurrentUserContext } from '../../contexts/CurrentUserContext'
+import api from "../../utils/MainApi";
+import { CurrentUserContext } from "../../contexts/CurrentUserContext";
 import "./Main.css";
 
 function Main() {
@@ -29,17 +29,18 @@ function Main() {
   const [userArticles, setUserArticles] = React.useState({});
 
   React.useEffect(() => {
-    api.checkUserData()
-      .then((res) => {
-        if (res.data) {
-          setUser(res.data)
-          api.getArticles()
-            .then((res) => {
-              console.log(res.filter(a => a.owner ));
-            })
-        }
-      })
-  }, [])
+    api.checkUserData().then((res) => {
+      if (res.data) {
+        console.log(res);
+        setUser(res.data);
+        api.getArticles().then((data) => {
+          setUserArticles({
+            articles: data.data.filter((a) => a.owner === res.data.id),
+          });
+        });
+      }
+    });
+  }, []);
 
   function onLogin() {
     setIsLoginPopupOpen(true);
@@ -64,60 +65,79 @@ function Main() {
 
   function onSearch(input) {
     setResults({});
-    setKeyword(input);
+    setKeyword(input[0].toUpperCase() + input.slice(1).toLowerCase());
     setIsNotFoundShown(false);
     setIsPreloaderShown(true);
-    api.getSearchData(input)
-      .then(data => {
+    api
+      .getSearchData(input)
+      .then((data) => {
         if (data.articles.length > 0) {
-          setResults(data)
+          setResults(data);
         } else {
           setIsNotFoundShown(true);
         }
         setIsPreloaderShown(false);
       })
-      .catch(e => console.log(e));
+      .catch((e) => console.log(e));
   }
 
   function onRegisterUser(email, password, username) {
-    api.registerUser(email, password, username)
+    api
+      .registerUser(email, password, username)
       .then((data) => {
         if (data) {
           setUser(data);
           closeAllPopups();
         }
       })
-      .catch(err => console.log(err));
+      .catch((err) => console.log(err));
   }
 
   function onLoginUser(email, password) {
-    api.loginUser(email, password)
+    api
+      .loginUser(email, password)
       .then((data) => {
         if (data.token) {
-          api.checkUserData()
-            .then((res) => {
-              if (res.data) {
-                setUser(res.data);
-              }
-            })
+          api.checkUserData().then((res) => {
+            if (res.data) {
+              setUser(res.data);
+            }
+          });
           closeAllPopups();
         }
       })
-      .catch(err => console.log(err));
+      .catch((err) => console.log(err));
   }
 
   function onLogoutUser() {
-    localStorage.removeItem('jwt');
+    localStorage.removeItem("jwt");
     setUser({});
     closeAllPopups();
   }
 
   function onSaveArticle(title, text, date, source, link, image) {
     console.log(title);
-    api.saveArticle(keyword, title, text, date, source, link, image)
+    api
+      .saveArticle(keyword, title, text, date, source, link, image)
       .then((data) => {
         console.log(data);
       })
+      .then(() => updateSavedArticles());
+  }
+
+  function onDeleteArticle(id) {
+    api
+      .deleteArticle(id)
+      .then((data) => console.log(data))
+      .then(() => updateSavedArticles());
+  }
+
+  function updateSavedArticles() {
+    api.getArticles().then((data) => {
+      setUserArticles({
+        articles: data.data.filter((a) => a.owner === user.id),
+      });
+    });
   }
 
   return (
@@ -135,11 +155,19 @@ function Main() {
             />
           )}
 
-          <SearchForm handleSearch={onSearch}/>
+          <SearchForm handleSearch={onSearch} />
         </div>
         {isPreloaderShown ? <Preloader /> : <></>}
         {isNotFoundShown ? <NotFound /> : <></>}
-        {results.articles ? <NewsCardList page="home" results={results} handleSaveClick={onSaveArticle} /> : <> </>}
+        {results.articles ? (
+          <NewsCardList
+            page="home"
+            results={results}
+            handleSaveClick={onSaveArticle}
+          />
+        ) : (
+          <> </>
+        )}
         <About />
         <Footer />
       </Route>
@@ -158,7 +186,11 @@ function Main() {
           )}
         </div>
         <SavedNews />
-        <NewsCardList page="news" />
+        <NewsCardList
+          page="news"
+          results={userArticles}
+          handleDeleteClick={onDeleteArticle}
+        />
         <Footer />
       </Route>
       <RegistrationPopup
