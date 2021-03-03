@@ -13,10 +13,18 @@ function LoginPopup(props) {
     setPassword(e.target.value);
   }
 
+  function clearStates() {
+    setEmail('');
+    setPassword('');
+  }
+
   function handleSubmit(e) {
     e.preventDefault();
     if (!email || !password) {
       return;
+    } else {
+      props.handleLoginUser(email, password);
+      clearStates();
     }
   }
 

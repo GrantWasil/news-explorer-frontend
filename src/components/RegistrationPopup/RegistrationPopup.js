@@ -18,10 +18,19 @@ function RegistrationPopup(props) {
     setUsername(e.target.value);
   }
 
+  function clearStates() {
+    setEmail('');
+    setPassword('');
+    setUsername('');
+  }
+
   function handleSubmit(e) {
     e.preventDefault();
     if (!email || !password || !username) {
       return;
+    } else {
+      props.handleRegisterUser(email, password, username)
+      clearStates();
     }
   }
 
