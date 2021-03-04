@@ -11,6 +11,7 @@ import SavedNews from "../SavedNews/SavedNews";
 import Navigation from "../Navigation/Navigation";
 import NotFound from "../NotFound/NotFound";
 import Preloader from "../Preloader/Preloader";
+import ProtectedRoute from "../ProtectedRoute/ProtectedRoute";
 import api from "../../utils/MainApi";
 import { CurrentUserContext } from "../../contexts/CurrentUserContext";
 import "./Main.css";
@@ -116,14 +117,19 @@ function Main() {
     history.push('/');
   }
 
-  function onSaveArticle(title, text, date, source, link, image) {
-    console.log(title);
-    api
+  function onSaveArticle(e, title, text, date, source, link, image, cb) {
+    if (user.name) {
+      api
       .saveArticle(keyword, title, text, date, source, link, image)
       .then((data) => {
         console.log(data);
       })
       .then(() => updateSavedArticles());
+      cb(e);
+    } else {
+      onLogin();
+    }
+
   }
 
   function onDeleteArticle(id) {
@@ -172,7 +178,7 @@ function Main() {
         <About />
         <Footer />
       </Route>
-      <Route path="/saved-news">
+      <ProtectedRoute path="/saved-news" user={user}>
         <div className="main__user">
           {isHeaderMenuOpen ? (
             <Navigation handleClose={closeAllPopups} handleLogin={onLogin} />
@@ -193,7 +199,7 @@ function Main() {
           handleDeleteClick={onDeleteArticle}
         />
         <Footer />
-      </Route>
+      </ProtectedRoute>
       <RegistrationPopup
         isOpen={isRegistrationPopupOpen}
         onClose={closeAllPopups}

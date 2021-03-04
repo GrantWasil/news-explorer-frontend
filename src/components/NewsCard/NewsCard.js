@@ -38,9 +38,12 @@ function NewsCard(props) {
     months[fixedDate.getMonth()]
   } ${fixedDate.getDate()}, ${fixedDate.getFullYear()}`;
 
-  function onButtonClick(e) {
+  function onSaveClick(e) {
     e.preventDefault();
-    handleClick(title, text, date, source, link, image);
+    handleClick(e, title, text, date, source, link, image, cb);
+    function cb(e) {
+      e.target.className = 'card__img-save_saved ' + e.target.className;
+    }
   }
 
   function onDeleteClick(e) {
@@ -103,7 +106,7 @@ function NewsCard(props) {
               aria-label="Save"
               onMouseEnter={handleButtonHover}
               onMouseLeave={handleButtonLeave}
-              onClick={onButtonClick}
+              onClick={onSaveClick}
             />
           </>
         )}
