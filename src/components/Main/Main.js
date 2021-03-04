@@ -23,6 +23,7 @@ function Main() {
   );
   const [isHeaderMenuOpen, setIsHeaderMenuOpen] = React.useState(false);
   const [keyword, setKeyword] = React.useState("");
+  const [keywords, setKeywords] = React.useState([]);
   const [results, setResults] = React.useState({});
   const [isPreloaderShown, setIsPreloaderShown] = React.useState(false);
   const [isNotFoundShown, setIsNotFoundShown] = React.useState(false);
@@ -35,9 +36,17 @@ function Main() {
       if (res.data) {
         setUser(res.data);
         api.getArticles().then((data) => {
+          let userArticles = data.data.filter((a) => a.owner === res.data.id);
           setUserArticles({
-            articles: data.data.filter((a) => a.owner === res.data.id),
+            articles: userArticles,
           });
+          let tempKeywords = [];
+          userArticles.forEach((a) => {
+            if (!tempKeywords.includes(a.keyword)) {
+              tempKeywords.push(a.keyword);
+            }
+          });
+          setKeywords(tempKeywords);
         });
       }
     });
@@ -114,22 +123,21 @@ function Main() {
     localStorage.removeItem("jwt");
     setUser({});
     closeAllPopups();
-    history.push('/');
+    history.push("/");
   }
 
   function onSaveArticle(e, title, text, date, source, link, image, cb) {
     if (user.name) {
       api
-      .saveArticle(keyword, title, text, date, source, link, image)
-      .then((data) => {
-        console.log(data);
-      })
-      .then(() => updateSavedArticles());
+        .saveArticle(keyword, title, text, date, source, link, image)
+        .then((data) => {
+          console.log(data);
+        })
+        .then(() => updateSavedArticles());
       cb(e);
     } else {
       onLogin();
     }
-
   }
 
   function onDeleteArticle(id) {
@@ -141,9 +149,17 @@ function Main() {
 
   function updateSavedArticles() {
     api.getArticles().then((data) => {
+      let userArticles = data.data.filter((a) => a.owner === user.id);
       setUserArticles({
-        articles: data.data.filter((a) => a.owner === user.id),
+        articles: userArticles,
       });
+      let tempKeywords = [];
+      userArticles.forEach((a) => {
+        if (!tempKeywords.includes(a.keyword)) {
+          tempKeywords.push(a.keyword);
+        }
+      });
+      setKeywords(tempKeywords);
     });
   }
 
@@ -192,7 +208,7 @@ function Main() {
             />
           )}
         </div>
-        <SavedNews user={user} articles={userArticles} />
+        <SavedNews user={user} articles={userArticles} keywords={keywords} />
         <NewsCardList
           page="news"
           results={userArticles}
