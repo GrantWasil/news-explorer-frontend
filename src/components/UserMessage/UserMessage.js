@@ -2,7 +2,7 @@ import React from "react";
 import "./UserMessage.css";
 
 function UserMessage(props) {
-  const { title, link, isOpen, onClose, onSignIn } = props;
+  const { isOpen, onClose, onSignIn } = props;
   return (
     <div className={isOpen ? `message message_opened` : `message`}>
       <div className="message__overlay" />

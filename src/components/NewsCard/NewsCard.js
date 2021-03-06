@@ -33,7 +33,7 @@ function NewsCard(props) {
     "December",
   ];
 
-  let fixedDate = new Date(date);
+  const fixedDate = new Date(date);
   const formattedDate = `${
     months[fixedDate.getMonth()]
   } ${fixedDate.getDate()}, ${fixedDate.getFullYear()}`;

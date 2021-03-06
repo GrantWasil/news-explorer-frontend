@@ -38,7 +38,7 @@ function Main() {
       if (res.data) {
         setUser(res.data);
         api.getArticles().then((data) => {
-          let userArticles = data.data.filter((a) => a.owner === res.data.id);
+          const userArticles = data.data.filter((a) => a.owner === res.data.id);
           setUserArticles({
             articles: userArticles,
           });
@@ -152,7 +152,7 @@ function Main() {
 
   function updateSavedArticles() {
     api.getArticles().then((data) => {
-      let userArticles = data.data.filter((a) => a.owner === user.id);
+      const userArticles = data.data.filter((a) => a.owner === user.id);
       setUserArticles({
         articles: userArticles,
       });
