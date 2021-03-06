@@ -3,20 +3,43 @@ import PopupWithForm from '../PopupWithForm/PopupWithForm';
 
 function LoginPopup(props) {
   const [email, setEmail] = React.useState('');
+  const [emailError, setEmailError] = React.useState('');
   const [password, setPassword] = React.useState('');
+  const [passwordError, setPasswordError] = React.useState('');
+  const [isValid, setIsValid] = React.useState(false);
 
   function handleEmailChange(e) {
     setEmail(e.target.value);
+    setEmailError(e.target.validationMessage);
+    setIsValid(e.target.closest("form").checkValidity());
   }
 
   function handlePasswordChange(e) {
     setPassword(e.target.value);
+    setPasswordError(e.target.validationMessage);
+    setIsValid(e.target.closest("form").checkValidity());
+  }
+
+  function clearStates() {
+    setEmail('');
+    setPassword('');
+    setEmailError('');
+    setPasswordError('');
+    setIsValid(false);
+  }
+
+  function handleClose() {
+    props.onClose();
+    clearStates()
   }
 
   function handleSubmit(e) {
     e.preventDefault();
     if (!email || !password) {
       return;
+    } else {
+      props.handleLoginUser(email, password);
+      clearStates();
     }
   }
 
@@ -25,11 +48,12 @@ function LoginPopup(props) {
       name="login"
       title="Sign in"
       isOpen={props.isOpen}
-      onClose={props.onClose}
+      onClose={handleClose}
       handleSubmit={handleSubmit}
       submit="Sign in"
       linkText="Sign up"
       handleLink={props.onLink}
+      isValid={isValid}
     >
       <fieldset className="popup__field">
         <label className="popup__label">Email</label>
@@ -48,7 +72,7 @@ function LoginPopup(props) {
         <span
           className="popup__input-error"
           id="newEmail-input-error"
-        ></span>
+        >{emailError}</span>
         <label className="popup__label">Password</label>
         <input
           className="popup__container-password popup__input"
@@ -65,7 +89,7 @@ function LoginPopup(props) {
         <span
           className="popup__input-error"
           id="newPassword-input-error"
-        ></span>
+        >{passwordError}</span>
       </fieldset>
     </PopupWithForm>
   )

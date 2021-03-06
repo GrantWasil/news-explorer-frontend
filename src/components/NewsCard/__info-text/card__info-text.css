@@ -1,11 +1,13 @@
 .card__info-text {
+  display: -webkit-box;
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
   font-size: 16px;
   line-height: 22px;
-  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 5;
   overflow: hidden;
-  margin: 0;
+  margin: 10px 0 0;
   max-height: 110px;
 }
 

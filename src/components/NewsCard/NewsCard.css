@@ -11,6 +11,7 @@
 @import url(./__img-delete/card__img-delete.css);
 @import url(./__img-status_shown/card__img-status_shown.css);
 @import url(./__img-save_saved/card__img-save_saved.css);
+@import url(./__link/card__link.css);
 
 .card {
   position: relative;

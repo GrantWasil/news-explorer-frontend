@@ -1,0 +1,13 @@
+.message__link {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21.78px;
+  margin: 0 0 0 36px;
+  color: #2F71E5;
+  width: 70px;
+}
+
+.message__link:hover {
+  cursor: pointer;
+}

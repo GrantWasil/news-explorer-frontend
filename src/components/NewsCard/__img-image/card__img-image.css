@@ -1,19 +1,18 @@
 .card__img-image {
+  object-fit: cover;
   width: 100%;
-  height: 100%;
+  height: 270px;
   border-radius: 10px 10px 0 0;
 }
 
 @media (max-width: 900px) {
   .card__img-image {
-    width: 100%;
-    height: 100%;
+    height: 150px;
   }
 }
 
 @media (max-width: 510px) {
   .card__img-image {
-    width: 100%;
-    height: 100%;
+    height: 196px;
   }
 }
