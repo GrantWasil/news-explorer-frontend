@@ -1,5 +1,5 @@
 import React from "react";
-import { Route, useHistory } from "react-router-dom";
+import { Route, useHistory, Switch } from "react-router-dom";
 import Header from "../Header/Header";
 import SearchForm from "../SearchForm/SearchForm";
 import NewsCardList from "../NewsCardList/NewsCardList";
@@ -165,69 +165,71 @@ function Main() {
 
   return (
     <CurrentUserContext.Provider value={user}>
-      <Route exact path="/">
-        <div className="main__search">
-          {isHeaderMenuOpen ? (
-            <Navigation handleClose={closeAllPopups} handleLogin={onLogin} />
-          ) : (
-            <Header
-              page="home"
-              handleLogin={onLogin}
-              handleLogout={onLogoutUser}
-              handleMenu={onMenu}
-            />
-          )}
+      <Switch>
+        <Route exact path="/">
+          <div className="main__search">
+            {isHeaderMenuOpen ? (
+              <Navigation handleClose={closeAllPopups} handleLogin={onLogin} />
+            ) : (
+              <Header
+                page="home"
+                handleLogin={onLogin}
+                handleLogout={onLogoutUser}
+                handleMenu={onMenu}
+              />
+            )}
 
-          <SearchForm handleSearch={onSearch} />
-        </div>
-        {isPreloaderShown ? <Preloader /> : <></>}
-        {isNotFoundShown ? <NotFound /> : <></>}
-        {results.articles ? (
-          <NewsCardList
-            page="home"
-            results={results}
-            handleSaveClick={onSaveArticle}
-          />
-        ) : (
-          <> </>
-        )}
-        <About />
-        <Footer />
-      </Route>
-      <ProtectedRoute path="/saved-news" user={user}>
-        <div className="main__user">
-          {isHeaderMenuOpen ? (
-            <Navigation handleClose={closeAllPopups} handleLogin={onLogin} />
-          ) : (
-            <Header
-              user="Test"
-              page="news"
-              handleLogin={onLogin}
-              handleLogout={onLogoutUser}
-              handleMenu={onMenu}
+            <SearchForm handleSearch={onSearch} />
+          </div>
+          {isPreloaderShown ? <Preloader /> : <></>}
+          {isNotFoundShown ? <NotFound /> : <></>}
+          {results.articles ? (
+            <NewsCardList
+              page="home"
+              results={results}
+              handleSaveClick={onSaveArticle}
             />
+          ) : (
+            <> </>
           )}
-        </div>
-        <SavedNews user={user} articles={userArticles} keywords={keywords} />
-        <NewsCardList
-          page="news"
-          results={userArticles}
-          handleDeleteClick={onDeleteArticle}
+          <About />
+          <Footer />
+        </Route>
+        <ProtectedRoute path="/saved-news" user={user}>
+          <div className="main__user">
+            {isHeaderMenuOpen ? (
+              <Navigation handleClose={closeAllPopups} handleLogin={onLogin} />
+            ) : (
+              <Header
+                user="Test"
+                page="news"
+                handleLogin={onLogin}
+                handleLogout={onLogoutUser}
+                handleMenu={onMenu}
+              />
+            )}
+          </div>
+          <SavedNews user={user} articles={userArticles} keywords={keywords} />
+          <NewsCardList
+            page="news"
+            results={userArticles}
+            handleDeleteClick={onDeleteArticle}
+          />
+          <Footer />
+        </ProtectedRoute>
+        <RegistrationPopup
+          isOpen={isRegistrationPopupOpen}
+          onClose={closeAllPopups}
+          onLink={onLogin}
+          handleRegisterUser={onRegisterUser}
         />
-        <Footer />
-      </ProtectedRoute>
-      <RegistrationPopup
-        isOpen={isRegistrationPopupOpen}
-        onClose={closeAllPopups}
-        onLink={onLogin}
-        handleRegisterUser={onRegisterUser}
-      />
-      <LoginPopup
-        isOpen={isLoginPopupOpen}
-        onClose={closeAllPopups}
-        onLink={onRegister}
-        handleLoginUser={onLoginUser}
-      />
+        <LoginPopup
+          isOpen={isLoginPopupOpen}
+          onClose={closeAllPopups}
+          onLink={onRegister}
+          handleLoginUser={onLoginUser}
+        />
+      </Switch>
     </CurrentUserContext.Provider>
   );
 }

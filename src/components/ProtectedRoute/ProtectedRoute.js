@@ -3,7 +3,7 @@ import { Route, Redirect } from 'react-router-dom';
 
 const ProtectedRoute = (props) => {
     return (
-        <Route>
+        <Route path={props.path}>
             {
                 () => props.user.name ? props.children : <Redirect to="/" />
             }
