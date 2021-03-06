@@ -38,6 +38,11 @@ function RegistrationPopup(props) {
     setIsValid(false);
   }
 
+  function handleClose() {
+    props.onClose();
+    clearStates()
+  }
+
   function handleSubmit(e) {
     e.preventDefault();
     if (!email || !password || !username) {
@@ -53,7 +58,7 @@ function RegistrationPopup(props) {
       name="register"
       title="Sign up"
       isOpen={props.isOpen}
-      onClose={props.onClose}
+      onClose={handleClose}
       handleSubmit={handleSubmit}
       submit="Sign up"
       linkText="Sign in"
