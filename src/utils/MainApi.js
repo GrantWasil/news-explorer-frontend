@@ -60,7 +60,8 @@ class Api {
           localStorage.setItem("jwt", data.token);
           return data;
         }
-      });
+      })
+      .catch((e) => console.log(e));
   }
 
   checkUserData() {
@@ -70,7 +71,9 @@ class Api {
         "Content-Type": "application/json",
         Authorization: `Bearer ${localStorage.getItem("jwt")}`,
       },
-    }).then((res) => res.json());
+    })
+      .then((res) => res.json())
+      .catch((e) => console.log(e));
   }
 
   getArticles() {
@@ -80,7 +83,9 @@ class Api {
         "Content-Type": "application/json",
         Authorization: `Bearer ${localStorage.getItem("jwt")}`,
       },
-    }).then((res) => res.json());
+    })
+      .then((res) => res.json())
+      .catch((e) => console.log(e));
   }
 
   saveArticle(keyword, title, text, date, source, link, image) {
@@ -99,7 +104,9 @@ class Api {
         link,
         image,
       }),
-    }).then((res) => res.json());
+    })
+      .then((res) => res.json())
+      .catch((e) => console.log(e));
   }
 
   deleteArticle(id) {
@@ -109,7 +116,9 @@ class Api {
         "Content-Type": "application/json",
         Authorization: `Bearer ${localStorage.getItem("jwt")}`,
       },
-    }).then((res) => res.json());
+    })
+      .then((res) => res.json())
+      .catch((e) => console.log(e));
   }
 }
 
