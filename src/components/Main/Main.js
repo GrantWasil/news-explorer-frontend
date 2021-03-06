@@ -203,7 +203,7 @@ function Main() {
               user="Test"
               page="news"
               handleLogin={onLogin}
-              handleLogout={closeAllPopups}
+              handleLogout={onLogoutUser}
               handleMenu={onMenu}
             />
           )}

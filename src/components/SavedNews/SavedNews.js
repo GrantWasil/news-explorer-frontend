@@ -10,7 +10,7 @@ function SavedNews(props) {
       <h3 className="saved__title">{user.name ? user.name : 'Loading'}, you have {articles.articles ? articles.articles.length : 0} saved articles</h3>
       <div className="saved__keywords">
         <p className="saved__keywords-title">By keywords:
-          <span className="saved__keywords-keyword">{keywords.length > 1 ? (
+          <span className="saved__keywords-keyword">{keywords.length >= 1 ? (
             keywords.length > 2 ? (
               `${keywords[0]}, ${keywords[1]} and ${keywords.length - 2} more.`
             ) : (
