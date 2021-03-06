@@ -22,7 +22,7 @@ function Main() {
   const [isRegistrationPopupOpen, setIsRegistrationPopupOpen] = React.useState(
     false
   );
-  const [isUserMessageOpen, setIsUserMessageOpen] = React.useState(true);
+  const [isUserMessageOpen, setIsUserMessageOpen] = React.useState(false);
   const [isHeaderMenuOpen, setIsHeaderMenuOpen] = React.useState(false);
   const [keyword, setKeyword] = React.useState("");
   const [keywords, setKeywords] = React.useState([]);
@@ -55,13 +55,12 @@ function Main() {
   }, []);
 
   function onLogin() {
+    closeAllPopups();
     setIsLoginPopupOpen(true);
-    setIsHeaderMenuOpen(false);
-    setIsRegistrationPopupOpen(false);
   }
 
   function onRegister() {
-    setIsLoginPopupOpen(false);
+    closeAllPopups();
     setIsRegistrationPopupOpen(true);
   }
 
@@ -101,6 +100,7 @@ function Main() {
         if (data) {
           setUser(data);
           closeAllPopups();
+          setIsUserMessageOpen(true);
         }
       })
       .catch((err) => console.log(err));
@@ -236,6 +236,7 @@ function Main() {
         <UserMessage
           isOpen={isUserMessageOpen}
           onClose={closeAllPopups}
+          onSignIn={onLogin}
         />
 
     </CurrentUserContext.Provider>
