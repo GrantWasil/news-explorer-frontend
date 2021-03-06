@@ -3,25 +3,39 @@ import PopupWithForm from '../PopupWithForm/PopupWithForm';
 
 function RegistrationPopup(props) {
   const [email, setEmail] = React.useState('');
+  const [emailError, setEmailError] = React.useState('');
   const [password, setPassword] = React.useState('');
+  const [passwordError, setPasswordError] = React.useState('');
   const [username, setUsername] = React.useState('');
+  const [usernameError, setUsernameError] = React.useState('');
+  const [isValid, setIsValid] = React.useState(false);
 
   function handleEmailChange(e) {
     setEmail(e.target.value);
+    setEmailError(e.target.validationMessage);
+    setIsValid(e.target.closest("form").checkValidity());
   }
 
   function handlePasswordChange(e) {
     setPassword(e.target.value);
+    setPasswordError(e.target.validationMessage);
+    setIsValid(e.target.closest("form").checkValidity());
   }
 
   function handleUsernameChange(e) {
     setUsername(e.target.value);
+    setUsernameError(e.target.validationMessage);
+    setIsValid(e.target.closest("form").checkValidity());
   }
 
   function clearStates() {
     setEmail('');
     setPassword('');
+    setEmailError('');
+    setPasswordError('');
     setUsername('');
+    setUsernameError('');
+    setIsValid(false);
   }
 
   function handleSubmit(e) {
@@ -44,6 +58,7 @@ function RegistrationPopup(props) {
       submit="Sign up"
       linkText="Sign in"
       handleLink={props.onLink}
+      isValid={isValid}
     >
       <fieldset className="popup__field">
         <label className="popup__label">Email</label>
@@ -62,7 +77,7 @@ function RegistrationPopup(props) {
         <span
           className="popup__input-error"
           id="newEmail-input-error"
-        ></span>
+        >{emailError}</span>
         <label className="popup__label">Password</label>
         <input
           className="popup__container-password popup__input"
@@ -79,7 +94,7 @@ function RegistrationPopup(props) {
         <span
           className="popup__input-error"
           id="newPassword-input-error"
-        ></span>
+        >{passwordError}</span>
         <label className="popup__label">Username</label>
         <input
           className="popup__container-username popup__input"
@@ -96,7 +111,7 @@ function RegistrationPopup(props) {
         <span
           className="popup__input-error"
           id="newUsername-input-error"
-        ></span>
+        >{usernameError}</span>
       </fieldset>
     </PopupWithForm>
   )
