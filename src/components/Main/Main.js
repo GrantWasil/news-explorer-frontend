@@ -12,6 +12,7 @@ import Navigation from "../Navigation/Navigation";
 import NotFound from "../NotFound/NotFound";
 import Preloader from "../Preloader/Preloader";
 import ProtectedRoute from "../ProtectedRoute/ProtectedRoute";
+import UserMessage from "../UserMessage/UserMessage";
 import api from "../../utils/MainApi";
 import { CurrentUserContext } from "../../contexts/CurrentUserContext";
 import "./Main.css";
@@ -21,6 +22,7 @@ function Main() {
   const [isRegistrationPopupOpen, setIsRegistrationPopupOpen] = React.useState(
     false
   );
+  const [isUserMessageOpen, setIsUserMessageOpen] = React.useState(true);
   const [isHeaderMenuOpen, setIsHeaderMenuOpen] = React.useState(false);
   const [keyword, setKeyword] = React.useState("");
   const [keywords, setKeywords] = React.useState([]);
@@ -71,6 +73,7 @@ function Main() {
     setIsRegistrationPopupOpen(false);
     setIsLoginPopupOpen(false);
     setIsHeaderMenuOpen(false);
+    setIsUserMessageOpen(false);
   }
 
   function onSearch(input) {
@@ -217,6 +220,7 @@ function Main() {
           />
           <Footer />
         </ProtectedRoute>
+        </Switch>
         <RegistrationPopup
           isOpen={isRegistrationPopupOpen}
           onClose={closeAllPopups}
@@ -229,7 +233,11 @@ function Main() {
           onLink={onRegister}
           handleLoginUser={onLoginUser}
         />
-      </Switch>
+        <UserMessage
+          isOpen={isUserMessageOpen}
+          onClose={closeAllPopups}
+        />
+
     </CurrentUserContext.Provider>
   );
 }
