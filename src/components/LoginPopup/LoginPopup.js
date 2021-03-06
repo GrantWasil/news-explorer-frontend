@@ -28,6 +28,11 @@ function LoginPopup(props) {
     setIsValid(false);
   }
 
+  function handleClose() {
+    props.onClose();
+    clearStates()
+  }
+
   function handleSubmit(e) {
     e.preventDefault();
     if (!email || !password) {
@@ -43,7 +48,7 @@ function LoginPopup(props) {
       name="login"
       title="Sign in"
       isOpen={props.isOpen}
-      onClose={props.onClose}
+      onClose={handleClose}
       handleSubmit={handleSubmit}
       submit="Sign in"
       linkText="Sign up"
