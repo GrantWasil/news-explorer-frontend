@@ -2,6 +2,7 @@
 @import url(./__info/about__info.css);
 @import url(./__info-title/about__info-title.css);
 @import url(./__info-text/about__info-text.css);
+@import url(./__info-link/about__info-link.css);
 
 .about {
   padding: 80px 0;

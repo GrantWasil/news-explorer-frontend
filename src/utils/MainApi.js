@@ -127,7 +127,7 @@ const lastWeek = new Date(Date.now() - 7 * 24 * 60 * 60 * 1000).toISOString();
 
 const api = new Api({
   newsApi: `https://nomoreparties.co/news/v2/everything?apiKey=29fdf2c3653342b698ddcf64e505ee71&pageSize=100&from=${lastWeek}&to=${today}`,
-  nxplrApi: `https://api.nxplr.com`,
+  nxplrApi: `https://api.nxplr.us`,
 });
 
 export default api;
