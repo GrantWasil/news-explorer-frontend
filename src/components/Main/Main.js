@@ -112,8 +112,8 @@ function Main() {
       .then((data) => {
         if (data.token) {
           api.checkUserData().then((res) => {
-            if (res.data) {
-              setUser(res.data);
+            if (res.user) {
+              setUser(res.user);
             }
           });
           closeAllPopups();
